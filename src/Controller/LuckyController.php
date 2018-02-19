@@ -13,7 +13,5 @@ class LuckyController extends Controller
         return $this->render('lucky/number.html.twig', array(
             'number' => $number,
         ));
-
-//        (new \DateTime())->format('Y-m-d');
     }
 }
