@@ -1,20 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello {{ controller_name }}!{% endblock %}
+{% block title %}Super home page{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    {% if advertisement.content|trim == 'symfony' %}
+        Hello, you may be interested in NFQ Academy
+    {% elseif not advertisement.content %}
+        Hello, maybe you want to log in?
+    {% else %}
+        Hello, happy to see you here
+        {# Should be removed in production #}
+        <pre>{{ dump(advertisement) }}</pre>
+    {% endif %}
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>src/Controller/HomeController.php</code></li>
-        <li>Your template at <code>templates/home/index.html.twig</code></li>
-    </ul>
-</div>
+    {% block nfq_academy %}{% endblock %}
 {% endblock %}
