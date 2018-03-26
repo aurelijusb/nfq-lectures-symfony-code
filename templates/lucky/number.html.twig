@@ -1,1 +1,7 @@
 <li>Your lucky number is <b>{{ number }}</b></li>
+
+{% block navigation %}
+    <ul>
+        <li><a href="{{ path('home') }}">Home page</a></li>
+    </ul>
+{% endblock %}

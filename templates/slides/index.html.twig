@@ -9,4 +9,10 @@
         <div><b>{{ page.id }}</b> {{ page.content }}</div>
     {% endfor %}
 </div>
+
+    {% block navigation %}
+        <ul>
+            <li><a href="{{ path('home') }}">Home page</a></li>
+        </ul>
+    {% endblock %}
 {% endblock %}
