@@ -9,8 +9,9 @@
         Hello, maybe you want to log in?
     {% else %}
         Hello, happy to see you here
-        {# Should be removed in production #}
-        <pre>{{ dump(advertisement) }}</pre>
+        {% if app.environment == 'dev'  %}
+            <pre>{{ dump(advertisement) }}</pre>
+        {% endif %}
     {% endif %}
 
     {% block nfq_academy %}{% endblock %}
