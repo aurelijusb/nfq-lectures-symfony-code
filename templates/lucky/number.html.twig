@@ -1,3 +1,7 @@
-<li>Your lucky number is <b>{{ number }}</b></li>
+{% extends 'base.html.twig' %}
 
-{% block navigation %}{{ navigation|raw }}{% endblock %}
+{% block title %}Random number{% endblock %}
+
+{% block body %}
+    <li>Your lucky number is <b>{{ number }}</b></li>
+{% endblock %}

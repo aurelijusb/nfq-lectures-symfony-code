@@ -8,5 +8,7 @@
     <body>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+
+        {% block navigation %}{{ navigation|raw }}{% endblock %}
     </body>
 </html>
