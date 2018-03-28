@@ -9,6 +9,6 @@
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
 
-        {% block navigation %}{{ navigation|raw }}{% endblock %}
+        {% block navigation %}{{ include('parts/navigation.html.twig', {current: navigation.current}) }}{% endblock %}
     </body>
 </html>
