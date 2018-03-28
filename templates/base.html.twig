@@ -9,6 +9,10 @@
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
 
-        {% block navigation %}{{ include('parts/navigation.html.twig', {current: navigation.current}) }}{% endblock %}
+        {% block navigation %}{% if navigation.current is defined %}
+            {{ include('parts/navigation.html.twig', {current: navigation.current}) }}
+        {% else %}
+            {{ include('parts/navigation.html.twig', {current: ''}) }}
+        {% endif %}{% endblock %}
     </body>
 </html>
