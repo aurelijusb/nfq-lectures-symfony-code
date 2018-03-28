@@ -16,8 +16,11 @@ class SlidesController extends Controller
         $em = $this->get('doctrine')->getManager();
         $pages = $em->getRepository(Page::class)->findAll();
 
+        $navigation = $this->renderView('parts/navigation.html.twig', ['current' => 'slides']);
+
         return $this->render('slides/index.html.twig', [
             'pages' => $pages,
+            'navigation' => $navigation,
         ]);
     }
 }

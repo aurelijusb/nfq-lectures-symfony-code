@@ -10,9 +10,5 @@
     {% endfor %}
 </div>
 
-    {% block navigation %}
-        <ul>
-            <li><a href="{{ path('home') }}">Home page</a></li>
-        </ul>
-    {% endblock %}
+    {% block navigation %}{{ navigation|raw }}{% endblock %}
 {% endblock %}

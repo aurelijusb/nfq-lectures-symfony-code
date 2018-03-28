@@ -1,0 +1,17 @@
+<ul>
+    {% if current == 'home' %}
+        <li><b>Home</b></li>
+    {% else %}
+        <li><a href="{{ path('home') }}">Home</a></li>
+    {% endif %}
+    {% if current == 'app_lucky_number' %}
+        <li><b>Random generator</b></li>
+    {% else %}
+        <li><a href="{{ path('app_lucky_number') }}">Random generator</a></li>
+    {% endif %}
+    {% if current == 'slides' %}
+        <li><b>Database example</b></li>
+    {% else %}
+        <li><a href="{{ path('slides') }}">Database example</a></li>
+    {% endif %}
+</ul>

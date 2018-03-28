@@ -16,10 +16,5 @@
 
     {% block nfq_academy %}{% endblock %}
 
-    {% block navigation %}
-        <ul>
-            <li><a href="{{ path('app_lucky_number') }}">Random generator</a></li>
-            <li><a href="{{ path('slides') }}">Database example</a></li>
-        </ul>
-    {% endblock %}
+    {% block navigation %}{{ navigation|raw }}{% endblock %}
 {% endblock %}
