@@ -1,2 +1,5 @@
+$body-bg: #e5f5f9;
+$body-color: darken($body-bg, 80%);
+
 // the ~ allows you to reference things in node_modules
 @import "~bootstrap/scss/bootstrap";
