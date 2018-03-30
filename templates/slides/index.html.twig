@@ -4,10 +4,13 @@
 
 {% block body %}
 
-<div class="example-wrapper">
+<ul class="list-group">
     {% for page in pages %}
-        <div><b>{{ page.id }}</b> {{ page.content }}</div>
+        <li class="list-group-item">
+            <span class="badge badge-primary badge-pill">{{ page.id }}</span>
+            {{ page.content }}
+        </li>
     {% endfor %}
-</div>
+</ul>
 
 {% endblock %}

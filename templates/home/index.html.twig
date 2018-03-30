@@ -3,16 +3,22 @@
 {% block title %}Super home page{% endblock %}
 
 {% block body %}
-    {% if advertisement.content|trim == 'symfony' %}
-        Hello, you may be interested in NFQ Academy
-    {% elseif not advertisement.content %}
-        Hello, maybe you want to log in?
-    {% else %}
-        Hello, happy to see you here
-        {% if app.environment == 'dev'  %}
-            <pre>{{ dump(advertisement) }}</pre>
+    <div class="jumbotron">
+        {% if advertisement.content|trim == 'symfony' %}
+            <h1 class="display-4">Hello,</h1>
+            <p class="lead">you may be interested in NFQ Academy</p>
+        {% elseif not advertisement.content %}
+            <h1 class="display-4">Hello,</h1>
+            <p class="lead">maybe you want to log in?</p>
+        {% else %}
+            <h1 class="display-4">Hello,</h1>
+            <p class="lead">happy to see you here</p>
+            {% if app.environment == 'dev'  %}
+                <pre>{{ dump(advertisement) }}</pre>
+            {% endif %}
         {% endif %}
-    {% endif %}
 
-    {% block nfq_academy %}{% endblock %}
+
+        {% block nfq_academy %}{% endblock %}
+    </div>
 {% endblock %}

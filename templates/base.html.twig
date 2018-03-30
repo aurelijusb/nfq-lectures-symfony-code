@@ -6,15 +6,18 @@
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
         {% endblock %}
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     </head>
     <body>
-        {% block body %}{% endblock %}
-
         {% block navigation %}{% if navigation.current is defined %}
             {{ include('parts/navigation.html.twig', {current: navigation.current}) }}
         {% else %}
             {{ include('parts/navigation.html.twig', {current: ''}) }}
         {% endif %}{% endblock %}
+
+        <div class="container">
+            {% block body %}{% endblock %}
+        </div>
 
         {% block javascripts %}
             <script src="{{ asset('build/js/app.js') }}"></script>
