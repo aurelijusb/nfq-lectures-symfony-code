@@ -15,5 +15,7 @@ security:
         main:
             anonymous: true
             http_basic: true
+            entry_point: App\Service\BasicAuthCustomOutput
+
     access_control:
         - { path: ^/admin, roles: ROLE_ADMIN }
